@@ -10,6 +10,7 @@ import Spinner from "@modules/common/icons/spinner"
 import { placeOrder } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"
 import { isManual, isPaypal, isStripe } from "@lib/constants"
+import { Check } from "lucide-react"
 
 type PaymentButtonProps = {
   cart: HttpTypes.StoreCart
@@ -75,7 +76,7 @@ const GiftCardPaymentButton = () => {
     <Button
       onClick={handleOrder}
       isLoading={submitting}
-       className="w-full lg:w-auto"
+       className="w-full lg:w-auto py-6"
       data-testid="submit-order-button"
     >
       Place order
@@ -176,7 +177,7 @@ const StripePaymentButton = ({
       <Button
         disabled={disabled || notReady}
         onClick={handlePayment}
-        className="w-full lg:w-auto"
+        className="w-full lg:w-auto  py-6"
         size="large"
         isLoading={submitting}
         data-testid={dataTestId}
@@ -286,11 +287,12 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
       <Button
         disabled={notReady}
         isLoading={submitting}
-         className="w-full lg:w-auto"
+         className="w-full lg:w-auto py-5"
         onClick={handlePayment}
         size="large"
         data-testid="submit-order-button"
       >
+        <Check size={16} />
         Place order
       </Button>
       <ErrorMessage
