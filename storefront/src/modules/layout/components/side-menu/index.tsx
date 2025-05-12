@@ -4,10 +4,13 @@ import { Popover, Transition } from "@headlessui/react"
 import { ArrowRightMini, XMark } from "@medusajs/icons"
 import { Text, clx, useToggleState } from "@medusajs/ui"
 import { Fragment } from "react"
+import { Menu, Home } from "lucide-react"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CountrySelect from "../country-select"
 import { HttpTypes } from "@medusajs/types"
+
+import Link from "next/link"
 
 const SideMenuItems = {
   Home: "/",
@@ -22,7 +25,10 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
 
   return (
     <div className="h-full">
-      <div className="flex items-center h-full">
+      <div className="flex items-center gap-3 h-full">
+        <Link href={"/"}>
+          <Home size={15} />
+        </Link>
         <Popover className="h-full flex">
           {({ open, close }) => (
             <>
@@ -31,7 +37,7 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                   data-testid="nav-menu-button"
                   className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base"
                 >
-                  Menu
+                  <Menu size={16} />
                 </Popover.Button>
               </div>
 
@@ -91,7 +97,7 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                         />
                       </div>
                       <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Medusa Store. All rights
+                        © {new Date().getFullYear()} Mola Store. All rights
                         reserved.
                       </Text>
                     </div>

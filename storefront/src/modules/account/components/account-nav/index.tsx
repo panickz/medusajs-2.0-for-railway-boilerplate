@@ -11,6 +11,7 @@ import Package from "@modules/common/icons/package"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { HttpTypes } from "@medusajs/types"
 import { signout } from "@lib/data/customer"
+import { LogOut, ShoppingBag, MapPinHouse } from "lucide-react"
 
 const AccountNav = ({
   customer,
@@ -95,8 +96,8 @@ const AccountNav = ({
                     onClick={handleLogout}
                     data-testid="logout-button"
                   >
-                    <div className="flex items-center gap-x-2">
-                      <ArrowRightOnRectangle />
+                    <div className="flex items-center gap-x-2 text-red-500">
+                    <ArrowRightOnRectangle  />
                       <span>Log out</span>
                     </div>
                     <ChevronDown className="transform -rotate-90" />
@@ -150,12 +151,14 @@ const AccountNav = ({
                   Orders
                 </AccountNavLink>
               </li>
-              <li className="text-grey-700">
+              <li className="text-red-500">
                 <button
                   type="button"
+                  className="flex gap-1 items-center"
                   onClick={handleLogout}
                   data-testid="logout-button"
                 >
+                  <LogOut size={14} />
                   Log out
                 </button>
               </li>

@@ -3,6 +3,29 @@
 @import "tailwindcss/utilities";
 
 @layer utilities {
+  .content {
+    @apply py-12
+  }
+
+  .content h1 {
+    @apply text-2xl lg:text-3xl font-semibold pb-4;
+  }
+
+  .content h2 {
+    @apply text-xl lg:text-2xl font-semibold pt-8 pb-4;
+  }
+
+  .content ul {
+    @apply pl-8 list-disc leading-normal flex-col flex gap-2;
+  }
+
+  .content a {
+    color: #3b81f6;
+  }
+
+  .content p {
+    @apply leading-relaxed pt-2 pb-2;
+  }
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
