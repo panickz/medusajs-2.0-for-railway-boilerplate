@@ -168,7 +168,7 @@ const Payment = ({
               </RadioGroup>
               {isStripe && stripeReady && (
                 <div className="mt-5 transition-all duration-150 ease-in-out">
-                  <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                  <Text className="txt-medium-plus text-ui-fg-base mb-1 font-semibold">
                     Enter your card details:
                   </Text>
 
