@@ -1,19 +1,13 @@
 import { Text } from "@medusajs/ui"
-
-import Medusa from "../../../common/icons/medusa"
-import NextJs from "../../../common/icons/nextjs"
+import Image from "next/image"
 
 const MedusaCTA = () => {
   return (
-    <Text className="flex gap-x-2 txt-compact-small-plus items-center">
-      Powered by
-      <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
-        <Medusa fill="#9ca3af" className="fill-[#9ca3af]" />
-      </a>
-      &
-      <a href="https://nextjs.org" target="_blank" rel="noreferrer">
-        <NextJs fill="#9ca3af" />
-      </a>
+    <Text className="flex gap-x-1 text-xs  items-center">
+     Payments With:
+     <Image src="/visa.svg" width={20} height={10} alt="Visa"/> 
+     <Image src="/maestro.svg" width={20} height={10} alt="Visa"/> 
+     <Image src="/mastercard.svg" width={20} height={10} alt="Visa"/> 
     </Text>
   )
 }
