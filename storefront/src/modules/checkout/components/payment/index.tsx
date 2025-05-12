@@ -14,6 +14,7 @@ import PaymentContainer from "@modules/checkout/components/payment-container"
 import { isStripe as isStripeFunc, paymentInfoMap } from "@lib/constants"
 import { StripeContext } from "@modules/checkout/components/payment-wrapper"
 import { initiatePaymentSession } from "@lib/data/cart"
+import { Pencil } from "lucide-react"
 
 const Payment = ({
   cart,
@@ -131,11 +132,12 @@ const Payment = ({
         </Heading>
         {!isOpen && paymentReady && (
           <Text>
-            <button
+           <button
               onClick={handleEdit}
-              className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+              className="text-ui-fg-interactive flex items-center gap-1 hover:text-ui-fg-interactive-hover"
               data-testid="edit-payment-button"
             >
+              <Pencil size={12} />
               Edit
             </button>
           </Text>

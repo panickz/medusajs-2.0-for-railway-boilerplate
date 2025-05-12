@@ -12,6 +12,7 @@ import { useEffect, useState } from "react"
 import { setShippingMethod } from "@lib/data/cart"
 import { convertToLocale } from "@lib/util/money"
 import { HttpTypes } from "@medusajs/types"
+import { Pencil } from "lucide-react"
 
 type ShippingProps = {
   cart: HttpTypes.StoreCart
@@ -82,13 +83,14 @@ const Shipping: React.FC<ShippingProps> = ({
           cart?.billing_address &&
           cart?.email && (
             <Text>
-              <button
-                onClick={handleEdit}
-                className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
-                data-testid="edit-delivery-button"
-              >
-                Edit
-              </button>
+             <button
+              onClick={handleEdit}
+              className="text-ui-fg-interactive flex items-center gap-1 hover:text-ui-fg-interactive-hover"
+              data-testid="edit-shipping-button"
+            >
+              <Pencil size={12} />
+              Edit
+            </button>
             </Text>
           )}
       </div>

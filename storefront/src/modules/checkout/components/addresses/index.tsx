@@ -15,6 +15,7 @@ import BillingAddress from "../billing_address"
 import ErrorMessage from "../error-message"
 import ShippingAddress from "../shipping-address"
 import { SubmitButton } from "../submit-button"
+import { Pencil } from "lucide-react"
 
 const Addresses = ({
   cart,
@@ -55,9 +56,10 @@ const Addresses = ({
           <Text>
             <button
               onClick={handleEdit}
-              className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+              className="text-ui-fg-interactive flex items-center gap-1 hover:text-ui-fg-interactive-hover"
               data-testid="edit-address-button"
             >
+              <Pencil size={12} />
               Edit
             </button>
           </Text>
