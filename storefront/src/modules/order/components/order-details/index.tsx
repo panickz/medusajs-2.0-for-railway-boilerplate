@@ -1,5 +1,6 @@
 import { HttpTypes } from "@medusajs/types"
 import { Text } from "@medusajs/ui"
+import { Clock } from "lucide-react"
 
 type OrderDetailsProps = {
   order: HttpTypes.StoreOrder
@@ -25,9 +26,10 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
         </span>
         .
       </Text>
-      <Text className="mt-2">
-        Order date:{" "}
-        <span data-testid="order-date">
+      <Text className="mt-2 flex items-center gap-1 font-semibold">
+        <Clock size={13} className="" />
+        <div>Order date:{" "}</div>
+        <span data-testid="order-date " className="font-normal">
           {new Date(order.created_at).toDateString()}
         </span>
       </Text>

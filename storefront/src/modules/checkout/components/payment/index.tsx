@@ -226,7 +226,7 @@ const Payment = ({
           {cart && paymentReady && activeSession ? (
             <div className="flex items-start gap-x-1 w-full">
               <div className="flex flex-col w-1/3">
-                <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                <Text className="txt-medium-plus text-ui-fg-base font-semibold mb-1">
                   Payment method
                 </Text>
                 <Text
@@ -238,7 +238,7 @@ const Payment = ({
                 </Text>
               </div>
               <div className="flex flex-col w-1/3">
-                <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                <Text className="txt-medium-plus text-ui-fg-base font-semibold  mb-1">
                   Payment details
                 </Text>
                 <div

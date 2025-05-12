@@ -101,7 +101,7 @@ const Addresses = ({
                     className="flex flex-col w-1/3"
                     data-testid="shipping-address-summary"
                   >
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className="txt-medium-plus font-semibold text-ui-fg-base mb-1">
                       Shipping Address
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
@@ -125,7 +125,7 @@ const Addresses = ({
                     className="flex flex-col w-1/3 "
                     data-testid="shipping-contact-summary"
                   >
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className="txt-medium-plus font-semibold text-ui-fg-base mb-1">
                       Contact
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
@@ -140,7 +140,7 @@ const Addresses = ({
                     className="flex flex-col w-1/3"
                     data-testid="billing-address-summary"
                   >
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className="txt-medium-plus font-semibold text-ui-fg-base mb-1">
                       Billing Address
                     </Text>
 

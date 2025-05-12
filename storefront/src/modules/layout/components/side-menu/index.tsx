@@ -25,10 +25,8 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
 
   return (
     <div className="h-full">
-      <div className="flex items-center gap-3 h-full">
-        <Link href={"/"}>
-          <Home size={15} />
-        </Link>
+      <div className="flex items-center gap-5 h-full">
+        
         <Popover className="h-full flex">
           {({ open, close }) => (
             <>
@@ -107,6 +105,12 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
             </>
           )}
         </Popover>
+        <Link href={"/"}>
+          <Home size={15} />
+        </Link>
+        <Link href={"/store"} >
+          Store
+        </Link>
       </div>
     </div>
   )
