@@ -57,7 +57,7 @@ export default function CategoryTemplate({
           </div>
         )}
         {category.category_children && (
-          <div className="mb-8 text-base-large">
+          <div className="mb-8 text-base-large hidden">
             <ul className=" grid-cols-1 gap-2 hidden">
               {category.category_children?.map((c) => (
                 <li key={c.id}>
