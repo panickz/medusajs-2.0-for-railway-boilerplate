@@ -58,7 +58,7 @@ export default function CategoryTemplate({
         )}
         {category.category_children && (
           <div className="mb-8 text-base-large">
-            <ul className="grid grid-cols-1 gap-2">
+            <ul className=" grid-cols-1 gap-2 hidden">
               {category.category_children?.map((c) => (
                 <li key={c.id}>
                   <InteractiveLink href={`/categories/${c.handle}`}>
