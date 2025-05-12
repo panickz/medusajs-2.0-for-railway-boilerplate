@@ -627,24 +627,24 @@
   resolved "https://registry.yarnpkg.com/@medusajs/client-types/-/client-types-0.2.12-preview-20240505115807.tgz#5090e140d4ade84668eedc81222ab35366088831"
   integrity sha512-f7T/7WUAGOFfsNsjdCcVoWLlAqryaQB+hF0v/Dzst2hv+PdJGqHfHwTNdeK3ZYhUwzSQ8YdnCYsj9OEJR9SPiQ==
 
-"@medusajs/icons@2.7.2-preview-20250512160839":
-  version "2.7.2-preview-20250512160839"
-  resolved "https://registry.yarnpkg.com/@medusajs/icons/-/icons-2.7.2-preview-20250512160839.tgz#dba3188f9742abec28c5dcf2f20c81ed8a6b58c8"
-  integrity sha512-elzLYODmy+JU1n/l80PRVUNX3jx9gAGFjV/o9achs3EBg3Af9suy8/ds2TQpYYZjEmSSdkr5lgT87XhC5+v0vw==
+"@medusajs/icons@2.7.1":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@medusajs/icons/-/icons-2.7.1.tgz#bba213644e7f702d1e417a92b0399f9205292b8f"
+  integrity sha512-UzSAHH+kKY5jjV4EUVugPD3NN6Ii2xEiGBpGWFF/kBEi9JhK5JAQcR+operus2hWcH1P4oToBbwuo69pEPyMeA==
 
-"@medusajs/js-sdk@preview":
-  version "2.7.2-preview-20250512160839"
-  resolved "https://registry.yarnpkg.com/@medusajs/js-sdk/-/js-sdk-2.7.2-preview-20250512160839.tgz#2fc6de5106e911984cf07d30a3e03a80962c5075"
-  integrity sha512-lPwcdLtEIYSw/R/ZF3XWuJyH4wMBuAsiLRt99vLSUNKTcg/9ulmpEfbPhVPVXRAIbmdiltLcwsxCPhQSVRh2lQ==
+"@medusajs/js-sdk@latest":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@medusajs/js-sdk/-/js-sdk-2.7.1.tgz#54c4d5ecc8f26bdd0216f915550072a554befdac"
+  integrity sha512-k+1bJmFaTi610yBOJQ0K6OzXxz2W1b3vuCO8MmMcb91/ysl6tIPG7QNuT4RdUKsTyz8c55VK+pFSYZ2cTLJdHQ==
   dependencies:
-    "@medusajs/types" "2.7.2-preview-20250512160839"
+    "@medusajs/types" "2.7.1"
     fetch-event-stream "^0.1.5"
     qs "^6.12.1"
 
-"@medusajs/types@2.7.2-preview-20250512160839", "@medusajs/types@preview":
-  version "2.7.2-preview-20250512160839"
-  resolved "https://registry.yarnpkg.com/@medusajs/types/-/types-2.7.2-preview-20250512160839.tgz#3504c1d48767e602c1f304bc8e087a654e4d451d"
-  integrity sha512-eQpGB+mBdCyomiqbCCY0YQS/uFAvC4QAhAkFykro9ElQjIEpIV7kxSJ4b51QuWvYA9P35V+7wXSS3F+5BXk0AQ==
+"@medusajs/types@2.7.1":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@medusajs/types/-/types-2.7.1.tgz#6b5ee6fd4a13204f2c61b063ff9533b6cd94aaa1"
+  integrity sha512-N1CXDwNRH2XnQBcMvtPgl9dWdCPaMGFZKT+Yduro9rhTrmuFDOJUtJpSM/fZIU5yA7RwJbrnnCWxBtJ0lQsEdA==
   dependencies:
     bignumber.js "^9.1.2"
 
@@ -656,12 +656,12 @@
     "@tailwindcss/forms" "^0.5.3"
     tailwindcss-animate "^1.0.6"
 
-"@medusajs/ui@preview":
-  version "4.0.10-preview-20250512160839"
-  resolved "https://registry.yarnpkg.com/@medusajs/ui/-/ui-4.0.10-preview-20250512160839.tgz#c35cca832d757a3c9ea60ae2db164d39e73e3449"
-  integrity sha512-v7959J2ZPJ8bayjg4HqS8QR73cLKDJhAxFF9r8a74wqLvJW16wzxLj7Ev8N8gJM6DTpNbJe+hk3fTWrIPZS1oQ==
+"@medusajs/ui@latest":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@medusajs/ui/-/ui-4.0.9.tgz#129a33b1ef073bbf945e6eca392c419aed0c2bc6"
+  integrity sha512-O4NuqshZ8mt8YRXERgoejDoGuMkf/U6qXaXowgBybeDzNFA3HiZsHtYYHoogcn4YxlIm7KIf8anaKStZZuXW8A==
   dependencies:
-    "@medusajs/icons" "2.7.2-preview-20250512160839"
+    "@medusajs/icons" "2.7.1"
     "@tanstack/react-table" "8.20.5"
     clsx "^1.2.1"
     copy-to-clipboard "^3.3.3"
