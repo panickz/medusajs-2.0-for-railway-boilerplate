@@ -75,7 +75,7 @@ const Shipping: React.FC<ShippingProps> = ({
         >
           Delivery
           {!isOpen && (cart.shipping_methods?.length ?? 0) > 0 && (
-            <CheckCircleSolid />
+            <CheckCircleSolid className="text-green-600" />
           )}
         </Heading>
         {!isOpen &&
@@ -137,7 +137,7 @@ const Shipping: React.FC<ShippingProps> = ({
 
           <Button
             size="large"
-            className="mt-6"
+            className="mt-6 w-full lg:w-auto"
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={!cart.shipping_methods?.[0]}

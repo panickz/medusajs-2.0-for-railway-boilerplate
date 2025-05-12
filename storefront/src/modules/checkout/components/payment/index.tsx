@@ -128,7 +128,7 @@ const Payment = ({
           )}
         >
           Payment
-          {!isOpen && paymentReady && <CheckCircleSolid />}
+          {!isOpen && paymentReady && <CheckCircleSolid className="text-green-600" />}
         </Heading>
         {!isOpen && paymentReady && (
           <Text>
@@ -209,7 +209,7 @@ const Payment = ({
 
           <Button
             size="large"
-            className="mt-6"
+            className="mt-6 w-full lg:w-auto"
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={

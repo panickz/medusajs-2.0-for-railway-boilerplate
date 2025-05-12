@@ -154,6 +154,16 @@ export default async function Footer() {
             <div className="flex flex-col gap-y-2">
               <span className="txt-small-plus txt-ui-fg-base">Mola</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+              <li>
+                  <a
+                    href="/about-us"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    About Us
+                  </a>
+                </li>
                 <li>
                   <a
                     href="mailto:geral@molaclothing.pt"
