@@ -32,7 +32,7 @@ export default async function Footer() {
                   Categories
                 </span>
                 <ul
-                  className="grid grid-cols-1 gap-2"
+                  className="grid grid-cols-1 space-y-0 gap-2"
                   data-testid="footer-categories"
                 >
                   {product_categories?.slice(0, 6).map((c) => {
@@ -49,13 +49,13 @@ export default async function Footer() {
 
                     return (
                       <li
-                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
+                        className="flex flex-col gap-0 font-normal txt-small"
                         key={c.id}
                       >
                         <LocalizedClientLink
                           className={clx(
                             "hover:text-ui-fg-base",
-                            children && "txt-small-plus"
+                            children && ""
                           )}
                           href={`/categories/${c.handle}`}
                           data-testid="category-link"
