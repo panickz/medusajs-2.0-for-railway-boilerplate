@@ -1,98 +1,309 @@
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowRight, Package, Truck, Heart, ShieldCheck } from "lucide-react"
+
 export default function AboutUs() {
   return (
-    <div className="max-w-screen-md mx-auto  px-4 lg:px-0 content">
-      <h1>About Us</h1>
+    <div className="flex flex-col min-h-screen">
+ <section className="relative h-[35vh] md:h-[35vh] overflow-hidden">
+    <video 
+      src="/about.mp4"
+      width={1920}
+      height={1080}
+      className="object-cover w-full h-full"
+      autoPlay
+      loop
+      muted
+    >
+      Your browser does not support the video tag.
+    </video>
+    <div
+      className="absolute inset-0 flex items-center justify-center   text-white bg-gradient-to-t from-black/40 to-transparent">
+      <div className="text-center">
+        <h1 className="text-3xl md:text-5xl font-semibold mb-4">About Mola</h1>
+        <p className="text-lg md:text-xl mb-6 max-w-xl">A touch of Portugal</p>
+      </div>
+    </div>
+  </section>
 
-      <p>
-        At Mola Clothing, we want you to be completely satisfied with your
-        purchase. Please read our Refund Policy carefully.
-      </p>
+      
 
-      <h2>1. Returns</h2>
-      <p>
-        You may return unworn, unwashed, and undamaged items with original tags
-        attached within 30 days of receiving your order for a full refund or
-        exchange, subject to the conditions below.
-      </p>
+      {/* Our Story Section */}
+      <section className="w-full max-w-[1300px] mx-auto py-12 md:py-24 lg:py-32">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="space-y-4">
+              <div className="inline-block rounded-lg bg-black/5 px-3 py-1 text-xs">
+                Our Journey
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                Our Story
+              </h2>
+              <p className="text-muted-foreground md:text-base">
+                Mola began in 2015 when our founders, Emma and James,
+                recognized a gap in the market for affordable, high-quality
+                fashion that didn't compromise on ethical standards.
+              </p>
+              <p className="text-muted-foreground md:text-base">
+                What started as a small online boutique has grown into a global
+                brand with a community of over 2 million fashion enthusiasts.
+                Our journey has been defined by our commitment to quality,
+                sustainability, and customer satisfaction.
+              </p>
+            </div>
+            <div className="relative h-[400px]">
+              <Image
+                src="/3.png?height=800&width=1200"
+                alt="Mola founders in their first warehouse"
+                fill
+                className="object-cover rounded-xl shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h2>2. How to Initiate a Return</h2>
-      <p>To initiate a return, please follow these steps:</p>
-      <ul>
-        <li>
-          Contact our customer service team at{" "}
-          <a href="mailto:geral@molaclothing.pt">geral@molaclothing.pt</a> with
-          your order number and the reason for the return.
-        </li>
-        <li>
-          We will provide you with instructions on how to return the item(s).
-        </li>
-        <li>
-          Please ensure the item(s) are securely packaged to prevent damage
-          during transit.
-        </li>
-      </ul>
+      {/* Values Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-black/5">
+        <div className="container px-4 max-w-[1300px] mx-auto md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                Our Values
+              </h2>
+              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                The principles that guide everything we do.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            <div className="bg-white rounded-md shadow-md">
+              <div className="p-6 flex flex-col items-center text-center space-y-4">
+                <Heart className="h-12 w-12 text-primary" />
+                <h3 className="text-xl font-bold">Customer First</h3>
+                <p className="text-muted-foreground">
+                  We prioritize our customers' needs and feedback in everything
+                  we create.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-md shadow-md">
+              <div className="p-6 flex flex-col items-center text-center space-y-4">
+                <ShieldCheck className="h-12 w-12 text-primary" />
+                <h3 className="text-xl font-bold">Quality Assurance</h3>
+                <p className="text-muted-foreground">
+                  We never compromise on the quality of our products or
+                  services.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-md shadow-md">
+              <div className="p-6 flex flex-col items-center text-center space-y-4">
+                <Truck className="h-12 w-12 text-primary" />
+                <h3 className="text-xl font-bold">Reliable Service</h3>
+                <p className="text-muted-foreground">
+                  Fast shipping, easy returns, and responsive customer support.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-md shadow-md">
+              <div className="p-6 flex flex-col items-center text-center space-y-4">
+                <Package className="h-12 w-12 text-primary" />
+                <h3 className="text-xl font-bold">Sustainable Practices</h3>
+                <p className="text-muted-foreground">
+                  Eco-friendly packaging and ethically sourced materials.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h2>3. Conditions for Returns</h2>
-      <ul>
-        <li>
-          Items must be returned in their original condition, unworn, unwashed,
-          and with all original tags attached.
-        </li>
-        <li>
-          We reserve the right to refuse returns that do not meet these
-          conditions.
-        </li>
-        <li>
-          For hygiene reasons, certain items (e.g., swimwear, underwear) may not
-          be eligible for return unless they are faulty. This will be clearly
-          stated in the product description.
-        </li>
-      </ul>
+      {/* Team Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container max-w-[1300px] mx-auto px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                Meet Our Team
+              </h2>
+              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                The passionate individuals behind Mola.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            <div className="flex flex-col items-center space-y-4">
+              <div className="relative h-40 w-40  rounded-full">
+                <Image
+                  src="/3.jpg?height=160&width=160"
+                  alt="Emma Johnson"
+                  fill
+               className="object-cover rounded-full shadow-md"
+                />
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold">Emma Johnson</h3>
+                <p className="text-muted-foreground">Co-Founder & CEO</p>
+                <svg
+                  className="w-4 mx-auto pt-1"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 382 382"
+                >
+                  <path
+                    style={{ fill: "#0077B7" }}
+                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-4">
+              <div className="relative h-40 w-40  rounded-full">
+                <Image
+                  src="/4.jpg?height=160&width=160"
+                  alt="James Wilson"
+                  fill
+                  className="object-cover rounded-full shadow-md"
+                />
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold">James Wilson</h3>
+                <p className="text-muted-foreground">Co-Founder & COO</p>
+                <svg
+                  className="w-4 mx-auto pt-1"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 382 382"
+                >
+                  <path
+                    style={{ fill: "#0077B7" }}
+                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-4">
+              <div className="relative h-40 w-40 rounded-full">
+                <Image
+                  src="/2.jpg?height=160&width=160"
+                  alt="Sarah Chen"
+                  fill
+                  className="object-cover rounded-full shadow-md"
+                />
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold">Sarah Chen</h3>
+                <p className="text-muted-foreground">Creative Director</p>
+                <svg
+                  className="w-4 mx-auto pt-1"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 382 382"
+                >
+                  <path
+                    style={{ fill: "#0077B7" }}
+                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="flex flex-col items-center space-y-4">
+              <div className="relative h-40 w-40 shadow-md rounded-full">
+                <Image
+                  src="/1.jpg?height=160&width=160"
+                  alt="Michael Rodriguez"
+                  fill
+                  className="object-cover rounded-full shadow-md"
+                />
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold">Michael Rodriguez</h3>
+                <p className="text-muted-foreground">Head of Technology</p>
+                <svg
+                  className="w-4 mx-auto pt-1"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 382 382"
+                >
+                  <path
+                    style={{ fill: "#0077B7" }}
+                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h2>4. Refunds</h2>
-      <ul>
-        <li>
-          Once we receive your returned item(s) and verify that they meet our
-          return conditions, we will process your refund within 7-10 business
-          days.
-        </li>
-        <li>
-          The refund will be credited to the original payment method used for
-          the purchase.
-        </li>
-        <li>
-          Please note that shipping costs are non-refundable unless the item was
-          faulty or we made an error with your order.
-        </li>
-      </ul>
-
-      <h2>5. Exchanges</h2>
-      <p>
-        If you would like to exchange an item for a different size or color,
-        please indicate this when contacting our customer service team.
-        Exchanges are subject to product availability. If the desired exchange
-        item is not available, we will process a refund instead.
-      </p>
-
-      <h2>6. Faulty Items</h2>
-      <p>
-        If you receive a faulty or damaged item, please contact us immediately
-        at <a href="mailto:geral@molaclothing.pt">geral@molaclothing.pt</a> with
-        details and photos of the defect. We will arrange for a replacement or a
-        full refund, including any applicable shipping costs.
-      </p>
-
-      <h2>7. Return Shipping Costs</h2>
-      <p>
-        Unless the item is faulty or we made an error with your order, you will
-        be responsible for the return shipping costs.
-      </p>
-
-      <h2>8. Contact Us</h2>
-      <p>
-        If you have any questions about our Refund Policy, please contact us at{" "}
-        <a href="mailto:geral@molaclothing.pt">geral@molaclothing.pt</a>.
-      </p>
+      {/* Call to Action */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-black/90 text-white">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                Join Our Journey
+              </h2>
+              <p className="mx-auto max-w-[700px] md:text-xl">
+                Discover our latest collections and be part of our growing
+                community.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button>
+                <Link
+                  className="flex bg-white text-black py-1.5 px-3 rounded-md text-sm items-center"
+                  href="/store"
+                >
+                  Shop Now <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </button>
+              <button>
+                <Link className="text-xs" href="mailto:geral@molaclothing.pt">
+                  Contact Us
+                </Link>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

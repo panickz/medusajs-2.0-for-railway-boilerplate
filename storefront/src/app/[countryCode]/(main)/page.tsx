@@ -7,7 +7,7 @@ import { getRegion } from "@lib/data/regions"
 import Image from "next/image"
 import Link from "next/link"
 import ChevronRight from "@modules/common/icons/chevron-down"
-import { ShoppingBag, User, Heart } from "lucide-react"
+import { ShoppingBag, User, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Mola Clothing - Portugal",
@@ -59,7 +59,7 @@ export default async function Home({
 
   {/* Featured Categories */}
   <section className="py-16 px-4 md:px-8">
-    <h2 className="text-2xl md:text-3xl  text-center mb-12">Iconic Clothing</h2>
+    <h2 className="text-2xl md:text-3xl font-semibold  text-center mb-12">Iconic Clothing</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Category 1 */}
       <div className="group relative overflow-hidden">
@@ -119,7 +119,7 @@ export default async function Home({
   <section className="py-16 px-4 md:px-8">
     <div className="grid md:grid-cols-2 gap-8 items-center">
       <div className="order-2 md:order-1">
-        <h2 className="text-2xl md:text-3xl  mb-6">The Art of Craftsmanship</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6">The Art of Craftsmanship</h2>
         <p className="text-neutral-600 mb-6">
           Since 2025, Mola  has brought unique designs to the world, combining innovation with style and
           uncompromising quality. Today, the House remains faithful to the spirit of its founder, Joe,
@@ -192,6 +192,37 @@ export default async function Home({
       </div>
     </div>
   </section>
+  {/* Call to Action */}
+  <section className="w-full py-12 md:py-24 lg:py-32 bg-black text-white">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                Join Our Journey
+              </h2>
+              <p className="mx-auto max-w-[700px] md:text-xl">
+                Discover our latest collections and be part of our growing
+                community.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button>
+                <Link
+                  className="flex bg-white text-black py-1.5 px-3 rounded-md text-sm items-center"
+                  href="/store"
+                >
+                  Shop Now <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </button>
+              <button>
+                <Link className="text-xs" href="mailto:geral@molaclothing.pt">
+                  Contact Us
+                </Link>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 </main>
 </div>
     </>

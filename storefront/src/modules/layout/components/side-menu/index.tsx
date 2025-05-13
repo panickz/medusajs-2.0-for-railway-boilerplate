@@ -111,6 +111,9 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
         <Link href={"/store"} >
           Store
         </Link>
+        <Link className="hidden md:block" href={"/about-us"} >
+          About
+        </Link>
       </div>
     </div>
   )
