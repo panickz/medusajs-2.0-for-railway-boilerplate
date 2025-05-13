@@ -157,8 +157,6 @@ export default async function Footer() {
               <li>
                   <a
                     href="/about-us"
-                    target="_blank"
-                    rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
                     About Us

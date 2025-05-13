@@ -49,7 +49,7 @@ export default async function Home({
       <h1 className="text-3xl md:text-5xl  font-light mb-4">Mola Clothing</h1>
       <p className="text-lg md:text-xl mb-6 max-w-xl">A touch of Portugal always with you</p>
       <div className="flex flex-col sm:flex-row gap-4">
-        <Link href="/store" className="bg-white text-black hover:bg-white/90 rounded-none px-8 py-4 flex gap-2 items-center text-sm">
+        <Link href="/store" className="bg-white text-black text-center justify-center hover:bg-white/90 rounded-none px-8 py-4 flex gap-2 items-center text-sm">
           <ShoppingBag size={16} />
         Shop Now
         </Link>
@@ -193,8 +193,8 @@ export default async function Home({
     </div>
   </section>
   {/* Call to Action */}
-  <section className="w-full py-12 md:py-24 lg:py-32 bg-black text-white">
-        <div className="container px-4 md:px-6">
+  <section className="w-full py-12 md:py-24 lg:py-32 bg-black text-white" style={{backgroundSize: '109px',backgroundImage: 'url(/mola-bg-2.svg)'}}>
+        <div className=" px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">

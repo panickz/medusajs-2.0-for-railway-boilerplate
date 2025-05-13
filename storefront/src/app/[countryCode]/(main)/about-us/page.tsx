@@ -30,8 +30,8 @@ export default function AboutUs() {
 
       {/* Our Story Section */}
       <section className="w-full max-w-[1300px] mx-auto py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+        <div className=" px-4 md:px-6">
+          <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
               <div className="inline-block rounded-lg bg-black/5 px-3 py-1 text-xs">
                 Our Journey
@@ -132,7 +132,7 @@ export default function AboutUs() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             <div className="flex flex-col items-center space-y-4">
               <div className="relative h-40 w-40  rounded-full">
                 <Image
@@ -274,8 +274,8 @@ export default function AboutUs() {
       </section>
 
       {/* Call to Action */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-black/90 text-white">
-        <div className="container px-4 md:px-6">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-black/95 text-white" style={{backgroundSize: '109px',backgroundImage: 'url(/mola-bg-2.svg)'}}>
+        <div className=" px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
