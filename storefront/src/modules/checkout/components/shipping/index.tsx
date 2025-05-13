@@ -188,7 +188,39 @@ const Shipping: React.FC<ShippingProps> = ({
                 <Text className="txt-medium-plus text-ui-fg-base font-semibold mb-1">
                   Method
                 </Text>
-                <Text className="txt-medium text-ui-fg-subtle">
+                <Text className="txt-medium text-ui-fg-subtle flex gap-2 items-center">
+                {selectedShippingMethod?.name.includes("CTT") && (
+                          <svg
+                            className="w-6"
+                            version="1.2"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1573 1004"
+                          >
+                            <g id="Menu-Principal/Footer">
+                              <g id="Particulares_footer">
+                                <g id="Group">
+                                  <g id="Group-18">
+                                    <path
+                                      id="Fill-58"
+                                      fill="#df0024"
+                                      d="m629.7 966c-71.8 21.6-152.9 37-230.9 37-260.5 0-397.8-160.3-397.8-400.8 0-238.9 137.3-400.8 397.8-400.8 78 0 159.1 15.4 230.9 37l-31.2 160.3c-70.2-21.6-117-30.8-173.2-30.8-134.1 0-190.3 98.6-190.3 234.3 0 135.7 56.2 234.3 190.3 234.3 56.2 0 103-9.2 173.2-30.8z"
+                                    />
+                                    <path
+                                      id="Fill-60"
+                                      fill="#df0024"
+                                      d="m967.1 383.3v390c0 52.4 35.9 67.9 70.2 67.9 15.6 0 48.4-1.6 67.1-6.2v155.7c-45.2 7.7-123.2 12.3-160.7 12.3-162.2 0-199.6-86.3-199.6-208.1v-411.6-166.5-100.5l223-115.3v215.8h137.3v166.5z"
+                                    />
+                                    <path
+                                      id="Fill-62"
+                                      fill="#df0024"
+                                      d="m1435.6 383.3v390c0 52.4 35.8 67.9 70.2 67.9 15.5 0 48.3-1.6 67-6.2v155.7c-45.2 7.7-123.2 12.3-160.6 12.3-162.3 0-199.7-86.3-199.7-208.1v-678.6l223.1-115.3v215.8h137.2v166.5z"
+                                    />
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        )}
                   {selectedShippingMethod?.name}{" "}
                   {convertToLocale({
                     amount: selectedShippingMethod?.amount!,

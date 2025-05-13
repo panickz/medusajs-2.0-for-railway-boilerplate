@@ -132,11 +132,11 @@ export default async function Home({
       </div>
       <div className="order-1 md:order-2">
         <Image
-          src="/amigos.webp"
+          src="/1.png"
           alt="Craftsmanship"
           width={800}
           height={800}
-          className="w-full h-auto" />
+          className="w-full h-1/2" />
       </div>
     </div>
   </section>
