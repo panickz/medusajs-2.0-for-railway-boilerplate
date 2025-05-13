@@ -72,7 +72,7 @@ export default async function Home({
         <div
           className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/50 to-transparent">
           <h3 className="text-xl text-white font-medium mb-2">Double Touch Steak</h3>
-          <Link href="/about-us" className="flex items-center text-white text-sm">
+          <Link href="/products/double-touch-steak" className="flex items-center text-white text-sm">
             Discover <ChevronRight className="h-4 w-4 ml-1" />
           </Link>
         </div>
@@ -89,7 +89,7 @@ export default async function Home({
         <div
           className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/50 to-transparent">
           <h3 className="text-xl text-white font-medium mb-2">It's For Sure a Portuguese House</h3>
-          <Link href="#" className="flex items-center text-white text-sm">
+          <Link href="/products/its-definitely-a-portuguese-house" className="flex items-center text-white text-sm">
             Discover <ChevronRight className="h-4 w-4 ml-1" />
           </Link>
         </div>
@@ -106,7 +106,7 @@ export default async function Home({
         <div
           className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/50 to-transparent">
           <h3 className="text-xl text-white font-medium mb-2">Too Much Sand for your Truck</h3>
-          <Link href="#" className="flex items-center text-white text-sm">
+          <Link href="/products/double-touch-stake-white" className="flex items-center text-white text-sm">
             Discover <ChevronRight className="h-4 w-4 ml-1" />
           </Link>
         </div>
@@ -125,10 +125,10 @@ export default async function Home({
           uncompromising quality. Today, the House remains faithful to the spirit of its founder, Joe,
           who invented a genuine "Art of Travel" through luggage, bags and accessories.
         </p>
-        <button
+        <Link href="/about-us"
           className="bg-transparent text-black border border-black hover:bg-black hover:text-white rounded-none px-8 py-4 transition-colors">
           About Us
-        </button>
+        </Link>
       </div>
       <div className="order-1 md:order-2">
         <Image
