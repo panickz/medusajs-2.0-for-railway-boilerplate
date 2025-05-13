@@ -11,6 +11,8 @@ import {
   ShieldCheck,
 } from "lucide-react"
 
+import { Button, Badge } from "@medusajs/ui"
+
 export const metadata: Metadata = {
   title: "About Us - Mola Clothing",
   description: "Explore all of our products.",
@@ -48,9 +50,9 @@ export default function AboutUs() {
         <div className=" px-4 md:px-6">
           <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-black/5 px-3 py-1 text-xs">
+              <Badge size="small" >
                 Our Journey
-              </div>
+              </Badge>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
                 Our Story
               </h2>
@@ -307,21 +309,24 @@ export default function AboutUs() {
                 community.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button>
-                <Link
-                  className="flex bg-white gap-1 text-black py-1.5 px-3 rounded-md text-sm items-center"
-                  href="/store"
-                >
-                  Shop Now <ShoppingBag size={13} />
-                </Link>
-              </button>
-              <button>
-                <Link className="text-xs" href="mailto:geral@molaclothing.pt">
-                  Contact Us
-                </Link>
-              </button>
-            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+                 
+                    <Link
+                      href="/store"
+                    >
+                      <Button data-testid="go-to-shop" className="flex gap-1 items-center" variant="secondary" size="large">
+                <ShoppingBag size={16} />
+                Shop Now
+                  
+                </Button>
+                    </Link>
+                    <Link
+                      className="text-xs"
+                      href="mailto:geral@molaclothing.pt"
+                    >
+                      Contact Us
+                    </Link>
+                </div>
           </div>
         </div>
       </section>
