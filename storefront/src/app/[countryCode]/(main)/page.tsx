@@ -160,7 +160,7 @@ export default async function Home({
                   alt="Craftsmanship"
                   width={800}
                   height={800}
-                  className="w-full h-1/2"
+                  className="w-full h-1/2 rounded-xl"
                 />
               </div>
             </div>
