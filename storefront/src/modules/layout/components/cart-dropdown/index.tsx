@@ -12,6 +12,7 @@ import LineItemOptions from "@modules/common/components/line-item-options"
 import LineItemPrice from "@modules/common/components/line-item-price"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import Thumbnail from "@modules/products/components/thumbnail"
+import { Check } from "lucide-react"
 
 const CartDropdown = ({
   cart: cartState,
@@ -68,6 +69,7 @@ const CartDropdown = ({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [totalItems, itemRef.current])
+
 
   return (
     <div
@@ -135,7 +137,7 @@ const CartDropdown = ({
                                     href={`/products/${item.variant?.product?.handle}`}
                                     data-testid="product-link"
                                   >
-                                    {item.title}
+                                    {item.product_title}
                                   </LocalizedClientLink>
                                 </h3>
                                 <LineItemOptions
@@ -183,6 +185,7 @@ const CartDropdown = ({
                       })}
                     </span>
                   </div>
+                  <div className="flex flex-col gap-1">
                   <LocalizedClientLink href="/cart" passHref>
                     <Button
                       className="w-full"
@@ -192,6 +195,18 @@ const CartDropdown = ({
                       Go to cart
                     </Button>
                   </LocalizedClientLink>
+                  <LocalizedClientLink href="/cart" passHref>
+                    <Button
+                      className="w-full flex items-center justify-center gap-1"
+                      variant="transparent"
+                      size="large"
+                      data-testid="go-to-checkout-button"
+                    >
+                      Go to Checkout
+                      <Check size="14" />
+                    </Button>
+                  </LocalizedClientLink>
+                  </div>
                 </div>
               </>
             ) : (
