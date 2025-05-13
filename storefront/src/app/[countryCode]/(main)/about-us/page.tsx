@@ -1,32 +1,47 @@
+import { Metadata } from "next"
+
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Package, Truck, Heart, ShieldCheck } from "lucide-react"
+import {
+  ArrowRight,
+  Package,
+  ShoppingBag,
+  Truck,
+  Heart,
+  ShieldCheck,
+} from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "About Us - Mola Clothing",
+  description: "Explore all of our products.",
+}
 
 export default function AboutUs() {
   return (
     <div className="flex flex-col min-h-screen">
- <section className="relative h-[35vh] md:h-[35vh] overflow-hidden">
-    <video 
-      src="/about.mp4"
-      width={1920}
-      height={1080}
-      className="object-cover w-full h-full"
-      autoPlay
-      loop
-      muted
-    >
-      Your browser does not support the video tag.
-    </video>
-    <div
-      className="absolute inset-0 flex items-center justify-center   text-white bg-gradient-to-t from-black/40 to-transparent">
-      <div className="text-center">
-        <h1 className="text-3xl md:text-5xl font-semibold mb-4">About Mola</h1>
-        <p className="text-lg md:text-xl mb-6 max-w-xl">A touch of Portugal</p>
-      </div>
-    </div>
-  </section>
-
-      
+      <section className="relative h-[35vh] md:h-[35vh] overflow-hidden">
+        <video
+          src="/about.mp4"
+          width={1920}
+          height={1080}
+          className="object-cover w-full h-full"
+          autoPlay
+          loop
+          muted
+        >
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 flex items-center justify-center   text-white bg-gradient-to-t from-black/40 to-transparent">
+          <div className="text-center">
+            <h1 className="text-3xl md:text-5xl font-semibold mb-4">
+              About Mola
+            </h1>
+            <p className="text-lg md:text-xl mb-6 max-w-xl">
+              A touch of Portugal
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Our Story Section */}
       <section className="w-full max-w-[1300px] mx-auto py-12 md:py-24 lg:py-32">
@@ -40,9 +55,9 @@ export default function AboutUs() {
                 Our Story
               </h2>
               <p className="text-muted-foreground md:text-base">
-                Mola began in 2015 when our founders, Emma and James,
-                recognized a gap in the market for affordable, high-quality
-                fashion that didn't compromise on ethical standards.
+                Mola began in 2015 when our founders, Emma and James, recognized
+                a gap in the market for affordable, high-quality fashion that
+                didn't compromise on ethical standards.
               </p>
               <p className="text-muted-foreground md:text-base">
                 What started as a small online boutique has grown into a global
@@ -139,7 +154,7 @@ export default function AboutUs() {
                   src="/3.jpg?height=160&width=160"
                   alt="Emma Johnson"
                   fill
-               className="object-cover rounded-full shadow-md"
+                  className="object-cover rounded-full shadow-md"
                 />
               </div>
               <div className="text-center">
@@ -274,7 +289,13 @@ export default function AboutUs() {
       </section>
 
       {/* Call to Action */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-black/95 text-white" style={{backgroundSize: '109px',backgroundImage: 'url(/mola-bg-2.svg)'}}>
+      <section
+        className="w-full py-12 md:py-24 lg:py-32 bg-black/95 text-white"
+        style={{
+          backgroundSize: "109px",
+          backgroundImage: "url(/mola-bg-2.svg)",
+        }}
+      >
         <div className=" px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -289,10 +310,10 @@ export default function AboutUs() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button>
                 <Link
-                  className="flex bg-white text-black py-1.5 px-3 rounded-md text-sm items-center"
+                  className="flex bg-white gap-1 text-black py-1.5 px-3 rounded-md text-sm items-center"
                   href="/store"
                 >
-                  Shop Now <ArrowRight className="ml-1 h-4 w-4" />
+                  Shop Now <ShoppingBag size={13} />
                 </Link>
               </button>
               <button>

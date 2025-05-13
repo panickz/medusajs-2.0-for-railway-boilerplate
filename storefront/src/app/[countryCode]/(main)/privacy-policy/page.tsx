@@ -1,3 +1,9 @@
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Privacy Policy - Mola Clothing",
+    description: "Explore all of our products.",
+  }
 export default function PrivacyPolicy() {
   return(
     <div className="max-w-screen-md mx-auto  px-4 lg:px-0 content">

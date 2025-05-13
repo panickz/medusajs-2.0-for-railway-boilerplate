@@ -208,10 +208,10 @@ export default async function Home({
             <div className="flex flex-col sm:flex-row gap-4">
               <button>
                 <Link
-                  className="flex bg-white text-black py-1.5 px-3 rounded-md text-sm items-center"
+                  className="flex bg-white gap-1 text-black py-1.5 px-3 rounded-md text-sm items-center"
                   href="/store"
                 >
-                  Shop Now <ArrowRight className="ml-1 h-4 w-4" />
+                  Shop Now <ShoppingBag size={13} />
                 </Link>
               </button>
               <button>
