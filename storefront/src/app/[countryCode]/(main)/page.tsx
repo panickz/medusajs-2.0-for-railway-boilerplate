@@ -45,7 +45,7 @@ export default async function Home({
               Your browser does not support the video tag.
             </video>
             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 text-white bg-gradient-to-t from-black/40 to-transparent">
-              <h1 className="text-3xl md:text-5xl  font-light mb-4">
+              <h1 className="text-3xl md:text-5xl  font-semibold mb-4">
                 Mola Clothing
               </h1>
               <p className="text-lg md:text-xl mb-6 max-w-xl">
