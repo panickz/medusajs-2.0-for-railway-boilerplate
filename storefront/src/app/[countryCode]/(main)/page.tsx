@@ -38,7 +38,8 @@ export default async function Home({
               src="/mola.mp4"
               width={1920}
               height={1080}
-              className="object-cover w-full h-full"
+              playsInline
+              className="object-cover w-full h-full pointer-events-none"
               autoPlay
               loop
               muted
@@ -63,6 +64,7 @@ export default async function Home({
             </div>
           </section>
           <StoreTemplate
+          title="Explore Our Most Recent Collection"
           hideRefinementList={true}
       countryCode={countryCode}
     />
