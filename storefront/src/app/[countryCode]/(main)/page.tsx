@@ -33,7 +33,7 @@ export default async function Home({
     <>
       <div className="min-h-screen flex flex-col">
         <main className="flex-1">
-          <section className="relative h-[60vh] md:h-[60vh] overflow-hidden">
+          <section className="relative h-[45vh] md:h-[60vh] overflow-hidden">
             <video
               src="/mola.mp4"
               width={1920}
