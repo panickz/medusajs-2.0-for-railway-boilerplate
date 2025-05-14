@@ -9,6 +9,7 @@ import { Button } from "@medusajs/ui"
 import Link from "next/link"
 import ChevronRight from "@modules/common/icons/chevron-down"
 import { ShoppingBag, User, ArrowRight } from "lucide-react"
+import StoreTemplate from "@modules/store/templates"
 
 export const metadata: Metadata = {
   title: "Mola Clothing - Portugal",
@@ -61,14 +62,17 @@ export default async function Home({
               </div>
             </div>
           </section>
-
-          {/* Featured Categories */}
+          <StoreTemplate
+          hideRefinementList={true}
+      countryCode={countryCode}
+    />
+          {/* Featured Categories 
           <section className="py-16 px-4 md:px-8">
             <h2 className="text-2xl md:text-3xl font-semibold  text-center mb-12">
               Iconic Clothing
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Category 1 */}
+            
               <div className="group relative overflow-hidden">
                 <Image
                   src="/shirt-steak.webp?height=800&width=600"
@@ -89,8 +93,7 @@ export default async function Home({
                   </Link>
                 </div>
               </div>
-
-              {/* Category 2 */}
+              
               <div className="group relative overflow-hidden">
                 <Image
                   src="/sweat-house.webp?height=800&width=600"
@@ -112,7 +115,6 @@ export default async function Home({
                 </div>
               </div>
 
-              {/* Category 3 */}
               <div className="group relative overflow-hidden">
                 <Image
                   src="/shirt-sand.webp?height=800&width=600"
@@ -134,7 +136,7 @@ export default async function Home({
                 </div>
               </div>
             </div>
-          </section>
+          </section>*}
 
           {/* Brand Story */}
           <section className="py-16 px-4 md:px-8">
