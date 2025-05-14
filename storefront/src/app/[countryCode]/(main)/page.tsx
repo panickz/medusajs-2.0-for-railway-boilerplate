@@ -64,6 +64,7 @@ export default async function Home({
             </div>
           </section>
           <StoreTemplate
+          centerTitle={true}
           title="Explore Our Most Recent Collection"
           hideRefinementList={true}
       countryCode={countryCode}

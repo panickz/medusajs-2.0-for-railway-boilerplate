@@ -8,12 +8,14 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 import PaginatedProducts from "./paginated-products"
 
 const StoreTemplate = ({
+  centerTitle = false,
   sortBy,
   page,
   countryCode,
   hideRefinementList = false,
   title = "All Products",
 }: {
+  centerTitle?: boolean
   sortBy?: SortOptions
   page?: string
   countryCode: string
@@ -32,8 +34,8 @@ const StoreTemplate = ({
     >
       {!hideRefinementList && <RefinementList sortBy={sort} />}
       <div className="w-full">
-        <div className="mb-8 text-2xl-semi">
-          <h1 data-testid="store-page-title">{title}</h1>
+        <div className={`${centerTitle ? 'text-center' : ''} mb-8 text-xl font-semibold lg:text-2xl-semi`}>
+          <h1 data-testid="lg:store-page-title">{title}</h1>
         </div>
         <Suspense fallback={<SkeletonProductGrid />}>
           <PaginatedProducts

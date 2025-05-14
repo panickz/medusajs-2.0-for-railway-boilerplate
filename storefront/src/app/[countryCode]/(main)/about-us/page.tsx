@@ -26,7 +26,8 @@ export default function AboutUs() {
           src="/about.mp4"
           width={1920}
           height={1080}
-          className="object-cover w-full h-full"
+          playsInline
+          className="object-cover w-full h-full pointer-events-none"
           autoPlay
           loop
           muted
