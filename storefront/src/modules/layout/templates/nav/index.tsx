@@ -23,6 +23,7 @@ export default async function Nav() {
           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
+              aria-label="Homepage"
               className=" uppercase  !opacity-100 text-black dark:text-white"
               data-testid="nav-store-link"
             >
@@ -45,6 +46,7 @@ export default async function Nav() {
               <LocalizedClientLink
                 className="hover:text-ui-fg-base"
                 href="/account"
+                aria-label="Account"
                 data-testid="nav-account-link"
               >
                 <CircleUserRound size={16} />
