@@ -174,14 +174,14 @@ export default async function Home({
           {/* Services */}
           <section className="py-16 bg-neutral-100">
             <div className="container mx-auto px-4">
-              <h2 className="text-2xl md:text-3xl  text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-semibold  text-center mb-12">
                 Our Services
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 flex items-center justify-center border border-black rounded-full">
-                      <ShoppingBag className="h-8 w-8" />
+                    <div className="w-14 h-14 flex items-center justify-center border-2 border-black rounded-full">
+                      <ShoppingBag className="h-6 w-6" />
                     </div>
                   </div>
                   <h3 className="text-lg font-medium mb-2">
@@ -194,9 +194,9 @@ export default async function Home({
 
                 <div className="text-center">
                   <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 flex items-center justify-center border border-black rounded-full">
+                    <div className="w-14 h-14 flex items-center justify-center  border-2 border-black rounded-full">
                       <svg
-                        className="h-8 w-8"
+                        className="h-6 w-6"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -227,8 +227,8 @@ export default async function Home({
 
                 <div className="text-center">
                   <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 flex items-center justify-center border border-black rounded-full">
-                      <User className="h-8 w-8" />
+                    <div className="w-14 h-14 flex items-center justify-center border-2 border-black rounded-full">
+                      <User className="h-6 w-6" />
                     </div>
                   </div>
                   <h3 className="text-lg font-medium mb-2">Client Services</h3>
