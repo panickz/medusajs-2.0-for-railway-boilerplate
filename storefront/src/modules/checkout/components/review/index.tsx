@@ -41,7 +41,7 @@ const Review = ({ cart }: { cart: any }) => {
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
                 By clicking the Place Order button, you confirm that you have
                 read, understand and accept our <Link href="/terms-conditions" target="_BLANK" className="text-ui-fg-interactive">Terms of Use</Link>, <Link href="/terms-conditions" target="_BLANK" className="text-ui-fg-interactive">Terms of Sale</Link> and
-                 <Link className="text-ui-fg-interactive" target="_BLANK" href="/return-policy"> Returns Policy</Link> and acknowledge that you have read Medusa
+                 <Link className="text-ui-fg-interactive" target="_BLANK" href="/return-policy"> Returns Policy</Link> and acknowledge that you have read Mola Clothing
                 Store&apos;s <Link className="text-ui-fg-interactive" target="_BLANK" href="/privacy-policy">Privacy Policy</Link>.
               </Text>
             </div>
