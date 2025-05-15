@@ -195,7 +195,7 @@ const CartDropdown = ({
                       Go to cart
                     </Button>
                   </LocalizedClientLink>
-                  <LocalizedClientLink href="/cart" passHref>
+                  <LocalizedClientLink href="/checkout" passHref>
                     <Button
                       className="w-full flex items-center justify-center gap-1"
                       variant="transparent"
