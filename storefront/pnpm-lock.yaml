@@ -59,6 +59,9 @@ importers:
       next:
         specifier: ^14.0.0
         version: 14.2.28(@babel/core@7.27.1)(@playwright/test@1.52.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next-sitemap:
+        specifier: ^4.2.3
+        version: 4.2.3(next@14.2.28(@babel/core@7.27.1)(@playwright/test@1.52.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       pg:
         specifier: ^8.11.3
         version: 8.16.0
@@ -279,6 +282,9 @@ packages:
     resolution: {integrity: sha512-+EzkxvLNfiUeKMgy/3luqfsCWFRXLb7U6wNQTk60tovuckwB15B191tJWvpp4HjiQWdJkCxO3Wbvc6jlk3Xb2Q==}
     engines: {node: '>=6.9.0'}
 
+  '@corex/deepmerge@4.0.43':
+    resolution: {integrity: sha512-N8uEMrMPL0cu/bdboEWpQYb/0i2K5Qn8eCsxzOmxSggJbbQte7ljMRoXm917AbntqTGOzdTu+vP3KOOzoC70HQ==}
+
   '@emnapi/core@1.4.3':
     resolution: {integrity: sha512-4m62DuCE07lw01soJwPiBGC0nAww0Q+RY70VZ+n49yDIO13yyinhbWCeNnaob0lakDtWQzSdtNWzJeOJt2ma+g==}
 
@@ -423,6 +429,9 @@ packages:
 
   '@napi-rs/wasm-runtime@0.2.9':
     resolution: {integrity: sha512-OKRBiajrrxB9ATokgEQoG87Z25c67pCpYcCwmXYX8PBftC9pBfN18gnm/fh1wurSLEKIAt+QRFLFCQISrb66Jg==}
+
+  '@next/env@13.5.11':
+    resolution: {integrity: sha512-fbb2C7HChgM7CemdCY+y3N1n8pcTKdqtQLbC7/EQtPdLvlMUT9JX/dBYl8MMZAtYG4uVMyPFHXckb68q/NRwqg==}
 
   '@next/env@14.2.28':
     resolution: {integrity: sha512-PAmWhJfJQlP+kxZwCjrVd9QnR5x0R3u0mTXTiZDgSd4h5LdXmjxCCWbN9kq6hkZBOax8Rm3xDW5HagWyJuT37g==}
@@ -3117,6 +3126,13 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
+  next-sitemap@4.2.3:
+    resolution: {integrity: sha512-vjdCxeDuWDzldhCnyFCQipw5bfpl4HmZA7uoo3GAaYGjGgfL4Cxb1CiztPuWGmS+auYs7/8OekRS8C2cjdAsjQ==}
+    engines: {node: '>=14.18'}
+    hasBin: true
+    peerDependencies:
+      next: '*'
+
   next@14.2.28:
     resolution: {integrity: sha512-QLEIP/kYXynIxtcKB6vNjtWLVs3Y4Sb+EClTC/CSVzdLD1gIuItccpu/n1lhmduffI32iPGEK2cLLxxt28qgYA==}
     engines: {node: '>=18.17.0'}
@@ -4237,6 +4253,8 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
+  '@corex/deepmerge@4.0.43': {}
+
   '@emnapi/core@1.4.3':
     dependencies:
       '@emnapi/wasi-threads': 1.0.2
@@ -4442,6 +4460,8 @@ snapshots:
       '@emnapi/runtime': 1.4.3
       '@tybys/wasm-util': 0.9.0
     optional: true
+
+  '@next/env@13.5.11': {}
 
   '@next/env@14.2.28': {}
 
@@ -6996,7 +7016,7 @@ snapshots:
       eslint: 8.10.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0(eslint@8.10.0))(eslint@8.10.0)
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.10.0)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.10.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.10.0)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(eslint@8.10.0))(eslint@8.10.0))(eslint@8.10.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.10.0)
       eslint-plugin-react: 7.37.5(eslint@8.10.0)
       eslint-plugin-react-hooks: 5.0.0-canary-7118f5dd7-20230705(eslint@8.10.0)
@@ -7026,7 +7046,7 @@ snapshots:
       tinyglobby: 0.2.13
       unrs-resolver: 1.7.2
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.10.0)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.10.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.10.0)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(eslint@8.10.0))(eslint@8.10.0))(eslint@8.10.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -7041,7 +7061,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.10.0)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.10.0):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.10.0)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(eslint@8.10.0))(eslint@8.10.0))(eslint@8.10.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -7759,6 +7779,14 @@ snapshots:
   natural-compare@1.4.0: {}
 
   neo-async@2.6.2: {}
+
+  next-sitemap@4.2.3(next@14.2.28(@babel/core@7.27.1)(@playwright/test@1.52.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
+    dependencies:
+      '@corex/deepmerge': 4.0.43
+      '@next/env': 13.5.11
+      fast-glob: 3.3.3
+      minimist: 1.2.8
+      next: 14.2.28(@babel/core@7.27.1)(@playwright/test@1.52.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   next@14.2.28(@babel/core@7.27.1)(@playwright/test@1.52.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
