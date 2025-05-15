@@ -14,7 +14,7 @@ import StoreTemplate from "@modules/store/templates"
 export const metadata: Metadata = {
   title: "Mola Clothing - Portugal",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Mola.",
+    "A Touch of Portugal",
 }
 
 export default async function Home({
