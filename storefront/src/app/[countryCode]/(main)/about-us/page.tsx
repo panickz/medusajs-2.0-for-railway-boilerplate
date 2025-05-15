@@ -150,9 +150,9 @@ export default function AboutUs() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+          <div className="grid grid-cols-2  sm:grid-cols-4 gap-8 max-w-[900px] mx-auto mt-12">
             <div className="flex flex-col items-center space-y-4">
-              <div className="relative h-40 w-40  rounded-full">
+              <div className="relative h-32 w-32 rounded-full">
                 <Image
                   src="/3.jpg?height=160&width=160"
                   alt="Emma Johnson"
@@ -186,7 +186,7 @@ export default function AboutUs() {
               </div>
             </div>
             <div className="flex flex-col items-center space-y-4">
-              <div className="relative h-40 w-40  rounded-full">
+              <div className="relative h-32 w-32  rounded-full">
                 <Image
                   src="/4.jpg?height=160&width=160"
                   alt="James Wilson"
@@ -220,7 +220,7 @@ export default function AboutUs() {
               </div>
             </div>
             <div className="flex flex-col items-center space-y-4">
-              <div className="relative h-40 w-40 rounded-full">
+              <div className="relative h-32 w-32 rounded-full">
                 <Image
                   src="/2.jpg?height=160&width=160"
                   alt="Sarah Chen"
@@ -254,7 +254,7 @@ export default function AboutUs() {
               </div>
             </div>
             <div className="flex flex-col items-center space-y-4">
-              <div className="relative h-40 w-40 shadow-md rounded-full">
+              <div className="relative h-32 w-32 shadow-md rounded-full">
                 <Image
                   src="/1.jpg?height=160&width=160"
                   alt="Michael Rodriguez"
