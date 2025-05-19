@@ -30,14 +30,11 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({
   switch (true) {
     case isStripe(paymentSession?.provider_id):
       return (
-        <>
         <StripePaymentButton
           notReady={notReady}
           cart={cart}
           data-testid={dataTestId}
-        />jj
-        </>
-        
+        />
       )
     default:
       return <Button disabled>Select a payment method</Button>
