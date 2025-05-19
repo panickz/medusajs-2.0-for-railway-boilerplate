@@ -1,7 +1,6 @@
 "use client"
 
 import { Heading } from "@medusajs/ui"
-import { cookies } from "next/headers"
 import { useEffect } from "react"
 
 import CartTotals from "@modules/common/components/cart-totals"
@@ -20,7 +19,6 @@ type OrderCompletedTemplateProps = {
 export default function OrderCompletedTemplate({
   order,
 }: OrderCompletedTemplateProps) {
-  const isOnboarding = cookies().get("_medusa_onboarding")?.value === "true"
   
   useEffect(() => {
     const removeCartId = async () => {
