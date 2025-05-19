@@ -42,7 +42,7 @@ const OrderSummary = ({ order }: OrderSummaryProps) => {
             <span>Shipping</span>
             <span>{getAmount(order.shipping_total)}</span>
           </div>
-          <div className="flex items-center justify-between ">
+          <div className="flex items-center justify-between">
             <span>Taxes</span>
             <span>{getAmount(order.tax_total)}</span>
           </div>

@@ -4,9 +4,6 @@ import { CreditCard } from "@medusajs/icons"
 import Ideal from "@modules/common/icons/ideal"
 import Bancontact from "@modules/common/icons/bancontact"
 import PayPal from "@modules/common/icons/paypal"
-import Visa from "@modules/common/icons/visa"
-
-
 
 /* Map of payment provider_id to their title and icon. Add in any payment providers you want to use. */
 export const paymentInfoMap: Record<
@@ -15,7 +12,7 @@ export const paymentInfoMap: Record<
 > = {
   pp_stripe_stripe: {
     title: "Credit card",
-    icon: <Visa className="rounded-md" />,
+    icon: <CreditCard />,
   },
   "pp_stripe-ideal_stripe": {
     title: "iDeal",
@@ -31,12 +28,26 @@ export const paymentInfoMap: Record<
   },
   pp_system_default: {
     title: "Manual Payment",
-    icon: <Visa className="rounded-md" />,
+    icon: <CreditCard />,
+  },
+  card: {
+    title: "Credit card",
+    icon: <CreditCard />,
+  },
+  ideal: {
+    title: "iDeal",
+    icon: <Ideal />,
+  },
+  bancontact: {
+    title: "Bancontact",
+    icon: <Bancontact />,
+  },
+  paypal: {
+    title: "PayPal",
+    icon: <PayPal />,
   },
   // Add more payment providers here
 }
-
-
 
 // This only checks if it is native stripe for card payments, it ignores the other stripe-based providers
 export const isStripe = (providerId?: string) => {

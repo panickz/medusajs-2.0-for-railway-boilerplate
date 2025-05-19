@@ -1,6 +1,5 @@
 import { HttpTypes } from "@medusajs/types"
 import { Text } from "@medusajs/ui"
-import { Clock } from "lucide-react"
 
 type OrderDetailsProps = {
   order: HttpTypes.StoreOrder
@@ -26,10 +25,9 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
         </span>
         .
       </Text>
-      <Text className="mt-2 flex items-center gap-1 font-semibold">
-        <Clock size={13} className="" />
-        <div>Order date:{" "}</div>
-        <span data-testid="order-date " className="font-normal">
+      <Text className="mt-2">
+        Order date:{" "}
+        <span data-testid="order-date">
           {new Date(order.created_at).toDateString()}
         </span>
       </Text>
@@ -44,7 +42,7 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
               Order status:{" "}
               <span className="text-ui-fg-subtle " data-testid="order-status">
                 {/* TODO: Check where the statuses should come from */}
-                {/* {formatStatus(order.fulfillment_status)} */}
+                 {formatStatus(order.status)}
               </span>
             </Text>
             <Text>
@@ -53,7 +51,7 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
                 className="text-ui-fg-subtle "
                 sata-testid="order-payment-status"
               >
-                {/* {formatStatus(order.payment_status)} */}
+                {formatStatus(order.payment_status)}
               </span>
             </Text>
           </>

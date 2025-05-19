@@ -1,35 +1,50 @@
-import { Github } from "@medusajs/icons"
-import { Button, Heading } from "@medusajs/ui"
+"use client";
 
+import React, { useState, useEffect } from "react";
+import { Heading } from "@medusajs/ui";
+import { useLanguage } from "../../../../i18n/LanguageContext" 
 const Hero = () => {
+  // Definiere deine 4 Bilder hier als feste URLs
+  const images = [
+    "https://bucket-production-af40.up.railway.app/medusa-media/DSC09710-01JKBCRRP1H777B1NRDXMJVJBB.jpg",
+    "https://bucket-production-af40.up.railway.app/medusa-media/IMG-20241117-WA0006.jpg",
+    "https://bucket-production-af40.up.railway.app/medusa-media/IMG-20241117-WA0008.jpg",
+  ];
+  
+  const { t } = useLanguage() // Get translation function
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Bild alle 5 Sekunden wechseln
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+    
+    // Aufräumen beim Unmount der Komponente
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-        <span>
-          <Heading
-            level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
-            Well done! You have successfully deployed your Medusa 2.0 store on Railway!
-          </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          >
-            Need help customizing your store?
-          </Heading>
-        </span>
-        <a
-          href="https://funkyton.com/medusajs-2-0-is-finally-here/"
-          target="_blank"
-        >
-          <h1 style={{ textDecoration: "underline" }}>
-            Visit the tutorial
-          </h1>
-        </a>
+    <div className="flex flex-col items-center justify-center py-12 border-b border-ui-border-base">
+      <div className="text-center mb-8">
+        <Heading level="h1">{t('hero.welcometext')}</Heading>
+      </div>
+      
+      <div className="w-full max-w-2xl px-4">
+        <img
+          src={images[currentIndex]}
+          alt=""
+          className="w-full h-auto max-h-[80vh]"
+          style={{ 
+            objectFit: 'contain',
+            aspectRatio: '2/3', // Portrait-Orientierung wie in deinem Original
+            transition: 'opacity 0.3s ease-in-out' // Sanfter Übergangseffekt
+          }}
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
