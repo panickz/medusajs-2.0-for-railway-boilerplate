@@ -9,7 +9,6 @@ import OrderDetails from "@modules/order/components/order-details"
 import ShippingDetails from "@modules/order/components/shipping-details"
 import PaymentDetails from "@modules/order/components/payment-details"
 import { HttpTypes } from "@medusajs/types"
-import { removeCartId } from "@lib/data/cookies"
 
 type OrderCompletedTemplateProps = {
   order: HttpTypes.StoreOrder
@@ -19,8 +18,7 @@ export default function OrderCompletedTemplate({
   order,
 }: OrderCompletedTemplateProps) {
   const isOnboarding = cookies().get("_medusa_onboarding")?.value === "true"
-
-  removeCartId();
+  cookies().set("_medusa_cart_id", "", { maxAge: -1 })
 
   return (
     <div className="py-6 min-h-[calc(100vh-64px)]">
