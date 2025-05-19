@@ -1,5 +1,8 @@
+"use client"
+
 import { Heading } from "@medusajs/ui"
 import { cookies } from "next/headers"
+import { useEffect } from "react"
 
 import CartTotals from "@modules/common/components/cart-totals"
 import Help from "@modules/order/components/help"
@@ -18,7 +21,16 @@ export default function OrderCompletedTemplate({
   order,
 }: OrderCompletedTemplateProps) {
   const isOnboarding = cookies().get("_medusa_onboarding")?.value === "true"
-  cookies().set("_medusa_cart_id", "", { maxAge: -1 })
+  
+  useEffect(() => {
+    const removeCartId = async () => {
+      await fetch('/api/remove-cart', {
+        method: 'GET',
+      })
+    }
+
+    removeCartId()
+  }, [])
 
   return (
     <div className="py-6 min-h-[calc(100vh-64px)]">
